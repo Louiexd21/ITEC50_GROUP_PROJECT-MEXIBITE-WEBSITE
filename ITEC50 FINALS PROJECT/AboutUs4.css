@@ -1,0 +1,335 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,500;1,600;1,700&family=Roboto:wght@100;300;400;500&display=swap');
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF8EE;
+    color: #2a435d;
+}
+
+                    /* Main Section */
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+.main{
+    height: 100vh; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    font-family: 'Poppins', 'Sans-serif';
+}
+
+                    /* About Us Head and background of the Head Section */
+.main .aboutUs-head {
+    height: 10vh;
+    /* display: block; */
+    width: 100%;
+    background-image: url(images/wood2.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;    
+    color: #ffffff;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.main .aboutUs-head .head-text{
+    font-size: 20px;
+    text-align: center;
+    color: #cc3333;
+    margin-top: 25px;
+}
+
+                /* Content 1 Section */
+
+ .main .content1{
+    margin: 40px 80px;
+    display: flex;
+    position: relative;
+}
+.main .content1 .content-p{
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    text-indent: 50px;
+}
+.main .content1 .content-image img{
+    max-width: 500px;
+    height: auto;
+    border-radius: 1em;
+    margin-left: 30px;
+}
+
+                    /* Content 2 Section */
+
+.main .content2{
+    display: flex;
+    align-items: center;
+    border: solid 4px #cc3333;
+    padding: 20px;
+    width: 80%; 
+    margin: auto;
+    border-radius: 20px;
+    text-indent: 50px;
+}
+.main .content2 .content2-image img{
+    max-height: 200px;
+    width: auto;
+    margin-right: 30px;
+    margin-left: -50px;
+    border-radius: 1em;
+}
+.main .content2 .content2-p{
+    text-align: justify;
+}
+
+                        /* Branches Section */
+.main .branches .branch-head h2{
+    margin-bottom: 30px;
+}
+.main .branches{
+    margin-top: 30px;
+}
+.main .branches .branch-head{
+    text-align: center;
+}
+.main .branches .allbranches{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
+.main .branches .allbranches .branch-1 .branch-1-image .mexibitehouse1 img{
+    width: 200px;
+    height: 200px;
+    border: solid #cc3333 3px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    
+
+}
+.branch-1, .branch-2{
+      margin: auto;  
+}
+
+
+    .main .branches .allbranches .branch-1 .branch-1-p{
+    height: 100%;
+    text-align: center;
+    margin-top: -100px;
+    margin: -100px;
+    border: #cc3333 solid 3px;
+    border-radius: 50%;
+    padding: 80px;
+    z-index: -1;
+}
+
+
+.main .branches .allbranches .branch-2 .branch-2-image .mexibitehouse-tanza img{
+    width: 200px;
+    height: 200px;
+    border: solid #cc3333 3px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;    
+}
+.main .allbranches .branch-2 .branch-2-p{
+    margin-top: -100px;
+    margin-left: -100px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 80px 110px;
+    border: solid #cc3333 3px;
+    z-index: -1;
+    
+}
+h4{
+    color: #cc3333;
+}
+
+                /* Responsiveness */
+
+/* Desktop/Laptop */
+
+
+@media (max-width: 1200px){
+    .main .aboutUs-head{
+        height: 15vh;
+    }
+}
+
+/*  Tablet */
+@media screen and (max-width: 992px){
+    .main .aboutUs-head {   
+        height: 15vh;   
+    }
+    .main .aboutUs-head .head-text h2{
+        font-size: 25px;
+        margin-top: -10px;
+    }
+    .main .aboutUs-head .head-text{
+        font-size: 30px;
+        margin-bottom: 1000px;
+    }
+    .main .content1{
+        margin: 20px 40px;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .main .content1 .content-p{
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+    }
+    .main .content1 .content-image img{
+        border-radius: 1em;
+        margin: 10px 0;
+    }
+
+    .main .content2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    }
+    .main .content2 .content2-image img{
+    margin: 1rem 0;
+    border-radius: 1em;
+    }
+    .main .content2 .content2-p {   
+        width: 80%;
+        margin: auto;
+
+    } 
+    .main .allbranches .branch-2{
+        margin-right: 10px;
+
+        
+    }
+    
+    }
+@media screen and (max-width: 825px){
+      .main .branches .allbranches{
+        flex-direction: column; 
+      }
+      .main .branches .allbranches .branch-2{
+        margin-top: 120px;
+    }
+}
+    
+/* Tablet/Mobile Large */
+@media screen and (max-width: 768px){
+        }
+        
+/* Mobile */
+@media screen and (max-width: 708px) {
+    .main .content2 .content2-image img{
+        max-height: 200px;
+        width: auto;
+        margin-left: -50px;  
+    }
+}
+@media(max-width: 576px){
+    p{
+        font-size: 16px;
+    }
+     .main .aboutUs-head{
+        position: relative;    
+    } 
+    .main .aboutUs-head .head-image{
+        width: 80px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 3rem;
+    }
+
+    .main .content1 .content-image img{
+         max-height: 150px;
+        width: auto; 
+    }
+    .main .content1 .content-p{
+        padding: 0%;
+        margin: 0;
+        width: 100%;;
+        text-align: justify;
+
+    }
+    .main .content2{
+        padding: -10px;
+    }
+
+    .main .content2 .content2-image img{
+        max-height: 150px;
+        width: auto;
+        margin-left: -50px;  
+    }
+    .main .content2 .content2-p{
+        width: 95%;    
+    }
+    .main .branches .allbranches .branch-1{
+        margin-right: 150px;
+    }
+    .main .branches .allbranches .branch-1 .branch-1-p{
+        font-size: 18px;
+        width: 180%;
+    }
+    .main .branches .allbranches .branch-1 .branch-1-image .mexibitehouse1 img{
+        margin-right: 20px;
+    }
+    h4{
+        font-size: medium;
+    }
+    .main .branches .allbranches .branch-2{
+        padding: -5px;
+        
+    }
+    .main .branches .allbranches .branch-2 .branch-2-p{
+        font-size: 18px;
+        width: 120%;
+        /* margin-right: 20px; */
+    }
+
+}
+@media screen and (max-width: 440px) {
+    .main .content2 .content2-image img{
+        max-height: 140px;
+    }
+    .main .branches .allbranches{
+        margin-left: 120px;
+    }
+    .main .branches .allbranches .branch-1{
+        margin-right: 50px;
+    }
+    .main .branches .allbranches .branch-1 .branch-1-p{
+        font-size: 18px;
+        width: 150%;
+        
+    }
+    .main .branches .allbranches .branch-1 .branch-1-image .mexibitehouse1 img{
+        margin-right: 50px;
+    }
+    h4{
+        font-size: medium;
+    }
+    .main .branches .allbranches .branch-2{
+        padding: -5px;
+        /* margin-left: px; */
+        
+    }
+    .main .branches .allbranches .branch-2 .branch-2-p{
+        font-size: 18px;
+        width: 120%;
+    }
+}
+
+    

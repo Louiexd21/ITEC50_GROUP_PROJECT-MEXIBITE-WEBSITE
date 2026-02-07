@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu Filter with Navigation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .menu-container {
+      margin-bottom: 20px;
+    }
+
+    .menu-buttons {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .menu-buttons button {
+      padding: 8px 16px;
+      margin: 0 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .menu-buttons button.active {
+      background-color: #45a049;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .menu-buttons button:focus {
+      outline: none;
+    }
+
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 10px;
+    }
+
+    .menu-item {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .menu-item.hide {
+      display: none;
+    }
+
+    .navigation-buttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .navigation-buttons button {
+      padding: 8px 16px;
+      margin: 0 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .navigation-buttons button[disabled] {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+
+    .navigation-buttons button:hover:not([disabled]) {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menu Filter with Navigation</h1>
+
+  <div class="menu-container">
+    <div class="menu-buttons">
+      <button id="drinksBtn" onclick="filterMenu('drinks')">Drinks</button>
+      <button id="foodsBtn" onclick="filterMenu('foods')">Foods</button>
+      <button id="dessertsBtn" onclick="filterMenu('desserts')">Desserts</button>
+    </div>
+
+    <div class="menu-items">
+      <div class="menu-item drinks">Coca-Cola</div>
+      <div class="menu-item drinks">Orange Juice</div>
+      <div class="menu-item foods">Burger</div>
+      <div class="menu-item foods">Pizza</div>
+      <div class="menu-item desserts">Ice Cream</div>
+      <div class="menu-item desserts">Cake</div>
+    </div>
+  </div>
+
+  <div class="navigation-buttons">
+    <button id="previousBtn" onclick="showPreviousCategory()" disabled>Previous</button>
+    <button id="nextBtn" onclick="showNextCategory()">Next</button>
+  </div>
+
+  <script>
+    var categories = ['drinks', 'foods', 'desserts'];
+    var currentCategoryIndex = 0;
+    var items = document.getElementsByClassName('menu-item');
+    var menuButtons = document.getElementsByClassName('menu-buttons')[0].getElementsByTagName('button');
+    var previousBtn = document.getElementById('previousBtn');
+    var nextBtn = document.getElementById('nextBtn');
+
+    function filterMenu(category) {
+      currentCategoryIndex = categories.indexOf(category);
+
+      for (var i = 0; i < items.length; i++) {
+        items[i].classList.add('hide');
+      }
+
+      var selectedItems = document.getElementsByClassName(category);
+      for (var i = 0; i < selectedItems.length; i++) {
+        selectedItems[i].classList.remove('hide');
+      }
+
+      updateActiveButton();
+      updateNavigationButtons();
+    }
+
+    function showPreviousCategory() {
+      currentCategoryIndex--;
+      if (currentCategoryIndex < 0) {
+        currentCategoryIndex = categories.length - 1;
+      }
+
+      var previousCategory = categories[currentCategoryIndex];
+      filterMenu(previousCategory);
+    }
+
+    function showNextCategory() {
+      currentCategoryIndex++;
+      if (currentCategoryIndex >= categories.length) {
+        currentCategoryIndex = 0;
+      }
+
+      var nextCategory = categories[currentCategoryIndex];
+      filterMenu(nextCategory);
+    }
+
+    function updateActiveButton() {
+      for (var i = 0; i < menuButtons.length; i++) {
+        menuButtons[i].classList.remove('active');
+      }
+
+      var activeButton = menuButtons[currentCategoryIndex];
+      activeButton.classList.add('active');
+    }
+
+    function updateNavigationButtons() {
+      previousBtn.disabled = currentCategoryIndex === 0;
+      nextBtn.disabled = currentCategoryIndex === categories.length - 1;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF8EE;
+    color: #2a435d;
+}
+
+                    /* Main Section */
+.main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    font-family: 'Roboto', sans-serif;
+}
+
+                    /* About Us Head and background of the Head Section */
+.main .aboutUs-head {
+    display: block;
+    width: 100vw;
+    background-image: url(wood2.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;    
+    color: #ffffff;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.main .aboutUs-head .head-text{
+    font-size: 48px;
+    text-align: center;
+    color: #cc3333;
+}
+.main .aboutUs-head .head-image img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 3rem;
+}
+
+                /* Content 1 Section */
+
+ .main .content1{
+    margin: 40px 80px;
+    display: flex;
+    position: relative;
+}
+.main .content1 .content-p{
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    text-indent: 50px;
+}
+.main .content1 .content-image img{
+    max-width: 500px;
+    height: auto;
+    border-radius: 1em;
+    margin-left: 30px;
+}
+
+                    /* Content 2 Section */
+
+.main .content2{
+    display: flex;
+    align-items: center;
+    border: solid 4px #cc3333;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    text-indent: 50px;
+}
+.main .content2 .content2-image img{
+    max-height: 200px;
+    width: auto;
+    margin-right: 30px;
+    margin-left: -50px;
+    border-radius: 1em;
+}
+.main .content2 .content2-p{
+    text-align: justify;
+}
+
+                        /* Branches Section */
+
+.main .branches .branch-head{
+    text-align: center;
+}
+.main .branches .allbranches{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
+.main .branches .allbranches .branch-1 .branch-1-image .mexibitehouse1 img{
+    width: 200px;
+    height: 200px;
+    border: solid #cc3333 3px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    
+
+}
+.branch-1, .branch-2{
+      margin: auto;  
+}
+
+
+    .main .branches .allbranches .branch-1 .branch-1-p{
+    text-align: center;
+    margin-top: -100px;
+    margin: -100px;
+    border: #cc3333 solid 3px;
+    border-radius: 50%;
+    padding: 80px;
+    z-index: -1;
+}
+
+
+.main .branches .allbranches .branch-2 .branch-2-image .mexibitehouse-tanza img{
+    width: 200px;
+    height: 200px;
+    border: solid #cc3333 3px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;    
+}
+.main .allbranches .branch-2 .branch-2-p{
+    margin-top: -100px;
+    margin-left: -100px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 80px 110px;
+    border: solid #cc3333 3px;
+    z-index: -1;
+    
+}
+h4{
+    color: #cc3333;
+}
+
+                /* Responsiveness */
+
+/* Desktop/Laptop */
+@media (max-width: 1200px){
+}
+
+/*  Tablet */
+@media screen and (max-width: 992px){
+    .main .aboutUs-head {   
+        height: 15vh;   
+    }
+    .main .aboutUs-head .head-text{
+        font-size: 30px;
+        margin-bottom: 1000px;
+    }
+    .main .content1{
+        margin: 20px 40px;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .main .content1 .content-p{
+        /* font-size: 1px; */
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* order: 2; */
+        width: 80%;
+        margin: auto;
+    }
+    .main .content1 .content-image img{
+        border-radius: 1em;
+        margin: 10px 0;
+    }
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+    .main .content2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    }
+    .main .content2 .content2-image img{
+    margin: 1rem 0;
+    border-radius: 1em;
+    }
+    .main .content2 .content2-p {   
+        width: 80%;
+        margin: auto;
+
+    } 
+    .main .allbranches .branch-2{
+        margin-right: 10px;
+
+        
+    }
+    
+    }
+    
+    
+/* Tablet/Mobile Large */
+@media screen and (max-width: 768px){
+    .main .aboutUs-head{
+        width: auto;
+    }
+     .main .aboutUs-head .head-image{
+        top: 2px;
+    }
+    .main .branches .allbranches{
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        margin: auto;
+    }
+    .main .branches .allbranches .branch-2{
+        margin-top: 120px;
+    }
+    .main .branches .allbranches .branch-2 .branch-2-p{
+        top: 600px;
+}
+
+}
+/* Mobile */
+@media screen and (max-width: 576px){
+    p{
+        font-size: 16px;
+    }
+    .main .aboutUs-head{
+        position: relative;
+    }
+    .main .aboutUs-head .head-image{
+        width: 80px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 3rem;
+    }
+    .main .content1 .content-image img{
+         max-height: 150px;
+        width: auto; 
+    }
+    .main .content1 .content-p{
+        padding: 0%;
+        margin: 0;
+        width: 100%;;
+        text-align: justify;
+
+    }
+
+    .main .content2{
+        padding: -10px;
+    }
+
+    .main .content2 .content2-image img{
+        max-height: 150px;
+        width: auto;
+        margin-left: -50px;  
+    }
+    .main .content2 .content2-p{
+        width: 95%;    
+    }
+    .main .branches .allbranches{
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        margin: 0 auto;
+    }
+    .main .branches .allbranches .branch-1{
+        margin-bottom: 200px;
+    }
+    .main .branches .allbranches .branch-1{
+        padding: auto;
+    }
+    .main .branches .allbranches .branch-2 .branch-2-p{
+        top: 580px;
+        padding: auto;
+}
+    .main .branches .allbranches .branch-1{
+        margin-bottom: -1px;
+    }
+}
